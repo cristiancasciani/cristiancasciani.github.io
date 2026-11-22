@@ -2,6 +2,8 @@ import Lenis from 'lenis';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
+import { reduceMotion } from './motion';
+
 gsap.registerPlugin(ScrollTrigger);
 
 export const NAV_OFFSET = -80;
@@ -19,6 +21,7 @@ export function scrollTo(target, opts = {}) {
 
 // Lenis smooth scroll driven by the GSAP ticker so ScrollTrigger stays in sync.
 export function initSmoothScroll() {
+  if (reduceMotion) return () => {};
   lenis = new Lenis();
   lenis.on('scroll', ScrollTrigger.update);
   const tick = (time) => lenis.raf(time * 1000);

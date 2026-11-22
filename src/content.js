@@ -3,16 +3,13 @@
 export const name = 'Cristian Casciani';
 export const email = 'cristiancasciani07@gmail.com';
 
-// TODO: real URLs. All listed for now; keep only the ones that exist.
+// Profiles without a URL are hidden. Add the address when the profile exists.
 export const socials = [
-  { label: 'GitHub', url: '#' },
-  { label: 'LinkedIn', url: '#' },
-  { label: 'Instagram', url: '#' },
-  { label: 'Behance', url: '#' },
-  { label: 'Dribbble', url: '#' },
-  { label: 'Fiverr', url: '#' },
-  { label: 'Upwork', url: '#' },
-  { label: 'X', url: '#' },
+  { label: 'GitHub', url: 'https://github.com/cristiancasciani' },
+  { label: 'LinkedIn', url: null },
+  { label: 'Instagram', url: null },
+  { label: 'Fiverr', url: null },
+  { label: 'Upwork', url: null },
 ];
 export const tools = ['HTML5', 'CSS3', 'JavaScript', 'React', 'GSAP', 'Python', 'Flask', 'SQLite', 'Git & GitHub'];
 
@@ -42,6 +39,9 @@ export const shot = (slug, lang, n, sizes = '100vw') => ({
 export const shotFull = (slug, lang, n) => shotUrl(slug, lang, n, 3840);
 
 const en = {
+  seoTitle: 'Cristian Casciani — Developer & Designer',
+  seoDescription: 'Cristian Casciani, freelance developer and designer from Italy: websites, web apps, Python automation and design for individuals and businesses.',
+  skip: 'Skip to content',
   nav: [['services', 'Services'], ['projects', 'Projects'], ['about', 'About'], ['contact', 'Contact']],
   themeTo: { light: 'Switch to light theme', dark: 'Switch to dark theme' },
   langSwitch: 'Leggi in italiano',
@@ -111,6 +111,9 @@ const en = {
 };
 
 const it = {
+  seoTitle: 'Cristian Casciani — Sviluppatore & Designer',
+  seoDescription: 'Cristian Casciani, sviluppatore e designer freelance: siti web, applicazioni, automazioni Python e grafica per privati e attività.',
+  skip: 'Vai al contenuto',
   nav: [['services', 'Servizi'], ['projects', 'Progetti'], ['about', 'Chi sono'], ['contact', 'Contatti']],
   themeTo: { light: 'Passa al tema chiaro', dark: 'Passa al tema scuro' },
   langSwitch: 'Read in English',

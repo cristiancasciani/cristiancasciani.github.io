@@ -17,6 +17,8 @@ export function LangProvider({ children }) {
 
   useEffect(() => {
     document.documentElement.lang = lang;
+    document.title = COPY[lang].seoTitle;
+    document.querySelector('meta[name="description"]')?.setAttribute('content', COPY[lang].seoDescription);
   }, [lang]);
 
   const setLang = useCallback((next) => {

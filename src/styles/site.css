@@ -26,6 +26,15 @@ body { background: var(--bg); color: var(--fg); font-family: var(--font-body); o
 ::selection { background: var(--acc); color: var(--bg); }
 .pad, .nav, .hero, .section, .footer { padding-inline: clamp(1.25rem, 4vw, 3rem); }
 
+/* Accessibility */
+.skip { position: fixed; left: 1rem; top: -4rem; z-index: 10000; background: var(--fg); color: var(--bg); padding: .7rem 1.1rem; border-radius: 999px; font-weight: 600; transition: top .2s; }
+.skip:focus { top: 1rem; }
+:focus-visible { outline: 2px solid var(--acc); outline-offset: 3px; border-radius: 4px; }
+main:focus { outline: none; }
+/* Reduced motion: entrance animations would leave inline opacity/transform; show everything as it is. */
+.reduce-motion main *, .reduce-motion main { opacity: 1 !important; transform: none !important; clip-path: none !important; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; } }
+
 /* Nav */
 .nav { position: fixed; inset: 0 0 auto; z-index: 50; display: flex; align-items: center; gap: 2rem; padding-block: 1.3rem;
   background: color-mix(in srgb, var(--bg) 80%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }

@@ -17,12 +17,15 @@ import Contact from './sections/Contact';
 import Footer from './sections/Footer';
 import ProjectPage from './sections/ProjectPage';
 import Cursor from './components/Cursor';
+import { useLang } from './lib/i18n';
+import { reduceMotion } from './lib/motion';
 import './styles/site.css';
 
 const SPARK = { light: '#ff4d2e', dark: '#c6ff3d' };
 
 export default function App() {
   const [theme, setTheme] = useState(getTheme);
+  const { c } = useLang();
   const route = useRoute();
   const pendingAnchor = useRef(null);
   const main = useRef(null);
@@ -44,6 +47,8 @@ export default function App() {
         dispatchEvent(new HashChangeEvent('hashchange'));
       } else {
         scrollTo(target);
+        const el = target && document.querySelector(target);
+        if (el && a.classList.contains('skip')) el.focus({ preventScroll: true });
       }
     };
     document.addEventListener('click', onClick);
@@ -57,14 +62,16 @@ export default function App() {
     scrollTo(0, { immediate: true });
     ScrollTrigger.refresh();
     if (target) requestAnimationFrame(() => requestAnimationFrame(() => { ScrollTrigger.refresh(); scrollTo(target); }));
+    if (reduceMotion) return; // content is shown as-is (see .reduce-motion in site.css)
     gsap.fromTo(main.current, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out', clearProps: 'transform' });
   }, [route.page, route.slug]);
 
   return (
     <ClickSpark sparkColor={SPARK[theme]} sparkCount={10}>
+      <a className="skip" href="#content">{c.skip}</a>
       <Noise opacity={theme === 'dark' ? 0.08 : 0.05} fixed />
       <Nav theme={theme} setTheme={setTheme} />
-      <main ref={main} key={route.page + (route.slug || '')}>
+      <main id="content" tabIndex={-1} ref={main} key={route.page + (route.slug || '')}>
         {route.page === 'project' ? (
           <ProjectPage slug={route.slug} />
         ) : (

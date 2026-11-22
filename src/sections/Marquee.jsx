@@ -1,12 +1,13 @@
 import { useRef } from 'react';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
+import { reduceMotion } from '../lib/motion';
 import { useLang } from '../lib/i18n';
 
 export default function Marquee() {
   const root = useRef(null);
   useGSAP(() => {
-    gsap.to('.marquee-track', { xPercent: -50, duration: 24, ease: 'none', repeat: -1 });
+    if (!reduceMotion) gsap.to('.marquee-track', { xPercent: -50, duration: 24, ease: 'none', repeat: -1 });
   }, { scope: root });
 
   const { c } = useLang();

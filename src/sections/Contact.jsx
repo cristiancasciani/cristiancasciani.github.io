@@ -73,7 +73,11 @@ export default function Contact() {
         </div>
       </form>
 
-      <ul className="socials">{socials.map((s) => <li key={s.label}><a href={s.url}>{s.label} ↗</a></li>)}</ul>
+      <ul className="socials">
+        {socials.filter((s) => s.url).map((s) => (
+          <li key={s.label}><a href={s.url} target="_blank" rel="noreferrer">{s.label} ↗</a></li>
+        ))}
+      </ul>
     </section>
   );
 }

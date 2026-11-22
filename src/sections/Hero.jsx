@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
+import { reduceMotion } from '../lib/motion';
 import SplitText from '../components/reactbits/SplitText';
 import Magnet from '../components/reactbits/Magnet';
 import { useLang } from '../lib/i18n';
@@ -12,7 +13,7 @@ export default function Hero() {
   useGSAP(() => {
     gsap.from('.reveal', { y: 30, opacity: 0, duration: 1, stagger: 0.1, delay: 0.5, ease: 'power3.out' });
     gsap.from('.stamp', { rotate: -90, scale: 0, duration: 1.2, delay: 0.9, ease: 'back.out(1.6)' });
-    gsap.to('.stamp svg', { rotate: 360, duration: 18, ease: 'none', repeat: -1 });
+    if (!reduceMotion) gsap.to('.stamp svg', { rotate: 360, duration: 18, ease: 'none', repeat: -1 });
   }, { scope: root });
 
   return (
