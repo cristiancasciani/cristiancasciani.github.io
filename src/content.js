@@ -6,7 +6,7 @@ export const email = 'cristiancasciani07@gmail.com';
 // Profiles without a URL are hidden. Add the address when the profile exists.
 export const socials = [
   { label: 'GitHub', url: 'https://github.com/cristiancasciani' },
-  { label: 'LinkedIn', url: 'https://www.linkedin.com/in/cristian-casciani-a700b5451/' },
+  { label: 'LinkedIn', url: 'https://www.linkedin.com/in/cristiancasciani/' },
   { label: 'Instagram', url: null },
   { label: 'Fiverr', url: null },
   { label: 'Upwork', url: null },
