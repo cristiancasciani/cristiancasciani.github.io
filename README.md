@@ -1,6 +1,6 @@
 # Cristian Casciani — Portfolio
 
-Personal portfolio: **https://cristiancasciani.github.io** · [LinkedIn](https://www.linkedin.com/in/cristiancasciani/)
+Personal portfolio: **https://cristiancasciani.github.io** · [LinkedIn](https://www.linkedin.com/in/cristiancasciani/) · [Instagram](https://www.instagram.com/cristian.casciani/)
 
 Italian / English, light ("Editorial") and dark ("Noir") themes, three demo projects with case-study pages.
 

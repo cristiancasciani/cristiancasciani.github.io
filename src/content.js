@@ -7,7 +7,7 @@ export const email = 'cristiancasciani07@gmail.com';
 export const socials = [
   { label: 'GitHub', url: 'https://github.com/cristiancasciani' },
   { label: 'LinkedIn', url: 'https://www.linkedin.com/in/cristiancasciani/' },
-  { label: 'Instagram', url: null },
+  { label: 'Instagram', url: 'https://www.instagram.com/cristian.casciani/' },
   { label: 'Fiverr', url: null },
   { label: 'Upwork', url: null },
 ];
