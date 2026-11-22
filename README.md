@@ -11,7 +11,7 @@ Italian / English, light ("Editorial") and dark ("Noir") themes, three demo proj
 | Project | Live | Code |
 |---|---|---|
 | KAZE — restaurant website | [demo](https://cristiancasciani.github.io/restaurant-website/) | [restaurant-website](https://github.com/cristiancasciani/restaurant-website) |
-| Circuito — shop management app | coming soon | [shop-management-app](https://github.com/cristiancasciani/shop-management-app) |
+| Circuito — shop management app | [demo](https://circuito-shop-demo.onrender.com/) (login `demo` / `demo123`, may take ~30 s to wake up) | [shop-management-app](https://github.com/cristiancasciani/shop-management-app) |
 | Ordo — Python automation | [demo](https://cristiancasciani.github.io/python-automation/) | [python-automation](https://github.com/cristiancasciani/python-automation) |
 
 ## Develop

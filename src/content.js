@@ -26,7 +26,7 @@ export const projectData = [
   { slug: 'restaurant-website', kind: 'site', year: '2026', tags: ['HTML', 'CSS', 'JavaScript'], shots: 3,
     demo: `${PAGES}/restaurant-website/`, code: `${GH}/restaurant-website` },
   { slug: 'shop-management-app', kind: 'app', year: '2026', tags: ['Python', 'Flask', 'SQLite', 'JavaScript'], shots: 3,
-    demo: null, code: `${GH}/shop-management-app` },
+    demo: 'https://circuito-shop-demo.onrender.com/', code: `${GH}/shop-management-app` },
   { slug: 'python-automation', kind: 'code', year: '2026', tags: ['Python', 'pypdf', 'Excel'], shots: 3,
     demo: `${PAGES}/python-automation/`, code: `${GH}/python-automation` },
 ];
